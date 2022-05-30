@@ -14,8 +14,8 @@ listint_t *slw, *fst;
 slw = fst = list;
 while (slw && fst && fst->next)
 {
-slow = slw->next;
-fast = fst->next->next;
+slw = slw->next;
+fst = fst->next->next;
 if (slw == fst)
 return (1);
 }
