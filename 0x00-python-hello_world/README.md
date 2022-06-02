@@ -3,17 +3,17 @@
 ## 0-run 
 Is a shell script to run a python file.
 ## File 1:
-Writes a Shell script that runs Python code
+A Shell script that runs Python code
 ## File 2:
-Write a Python script that prints a given string followed by a new line
+A Python script that prints a given string followed by a new line
 ## File 3:
-prints the integer stored in the variable "number", followed by "Battery street", followed by a new line.
+Prints the integer stored in the variable "number", followed by "Battery street", followed by a new line.
 ## File 4:
-prints the float stored in the variable "number" with a precision of 2 digits.
+Prints the float stored in the variable "number" with a precision of 2 digits.
 ## File 5:
-prints 3 times a string stored in the variable "str", followed by its first 9 characters
+Prints 3 times a string stored in the variable "str", followed by its first 9 characters
 ## File 6:
-prints string
+Prints string
 ## File 7:
 Splices up a string
 ## File 8:
@@ -21,11 +21,11 @@ Creates new sentence from spliced words
 ## File 9:
 Uses import this to print 'The Zen of Python'
 ## File 10:
-checks if a singly linked list has a cycle in it.
+Checks if a singly linked list has a cycle in it.
 ## File 100:
-uses sys function write to print to stderr a string and exit status is 1
+Uses sys function write to print to stderr a string and exit status is 1
 ## File 101:
-script that compiles a Python script file.
+Script that compiles a Python script file.
 ## File 102:
-bytecode interpretation
+Bytecode interpretation
 
