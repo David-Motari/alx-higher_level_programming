@@ -1,1 +1,1 @@
-Repository for ALX High-level pragramming languages
+Repository for ALX High-level programming languages
