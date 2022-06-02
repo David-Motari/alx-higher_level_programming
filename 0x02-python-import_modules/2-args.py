@@ -10,4 +10,4 @@ if __name__ == "__main__":
     print("{:d} arguement{}{}".format(n - 1, s, p))
 
     for i in range(1, n):
-        iprint("{:d}: {}".format(i, sys.argv[i]))
+        print("{:d}: {}".format(i, sys.argv[i]))
