@@ -1,4 +1,4 @@
-#0x00. Python - Hello, World
+# 0x00. Python - Hello, World
 
 ## 0-run 
 Is a shell script to run a python file.
@@ -22,10 +22,10 @@ Creates new sentence from spliced words
 Uses import this to print 'The Zen of Python'
 ## File 10:
 checks if a singly linked list has a cycle in it.
-## File 11:
+## File 100:
 uses sys function write to print to stderr a string and exit status is 1
-## File 12:
+## File 101:
 script that compiles a Python script file.
-## File 13:
+## File 102:
 bytecode interpretation
 
