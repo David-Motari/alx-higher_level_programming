@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+
+# function that converts roman numeral to an integer.
 def roman_to_int(roman_string):
     if type(roman_string) != str or roman_string = None:
         return 0
