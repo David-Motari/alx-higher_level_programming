@@ -4,7 +4,6 @@
 # Function that returns best score or None if dictionary is empty.
 def best_score(a_dictionary):
     if (a_dictionary and len(a_dictionary)):
-        b_key = max(a_dictionary)
-        return b_key
+        return max(a_dictionary, key=a_dictionary.get)
     else:
         return None
