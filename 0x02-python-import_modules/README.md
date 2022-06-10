@@ -19,4 +19,4 @@
 ## File 102.
 * [102-magic_calculation.py](./102-magic_calculation.py): function matching exactly a bytecode provided by ALX.
 ## File 103:
-[103-fast_alphabet.py](./103-fast_alphabet.py): prints the alphabet in uppercase, followed by a new line.
+* [103-fast_alphabet.py](./103-fast_alphabet.py): prints the alphabet in uppercase, followed by a new line.
