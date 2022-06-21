@@ -1,11 +1,11 @@
 #!/usr/bin.python3
 """
-    Defines a square
+    0-square.py
 """
 
 
 class Square:
     """
-        None empty class
+       defines a square
     """
     pass
