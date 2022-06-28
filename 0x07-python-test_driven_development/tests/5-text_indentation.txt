@@ -1,0 +1,66 @@
+test module for text_indentation
+=================================================================
+
+Using `text_indentation`
+__________________________________________________________________
+
+first import text_indentation from module 5-text_indentation:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+test first for ("."):
+    >>> text_indentation("igitur ne illud quidem. quae est moderatio cupiditatum rationi oboediens.")
+    igitur ne illud quidem.
+    <BLANKLINE>
+    quae est moderatio cupiditatum rationi oboediens.
+    <BLANKLINE>
+
+test for ("?"):
+    >>> text_indentation("Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?")
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+
+test for (":"):
+    >>> text_indentation("Non autem hoc:")
+    Non autem hoc:
+    <BLANKLINE>
+
+test for text as integer:
+    >>> text_indentation(100)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test for text as float:
+    >>> text_indentation(10.9)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test for text as negative number:
+    >>> text_indentation(-10)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test for text as 0:
+    >>> text_indentation(0)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test for None:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test for boolean(True):
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test for empty string:
+    >>> text_indentation("")

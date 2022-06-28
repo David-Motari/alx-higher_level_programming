@@ -1,0 +1,85 @@
+Test module for 2-matrix_divide
+======================================
+
+Using `matrix_divided`
+_______________________________________
+
+firts import `matrix_divided` from `2-matrix_divided`:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+test for usage using matrix of string list and int list:
+    >>> matrix_divided([["me","you","them"],[3,6,9]], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test using correct matrix:
+    >>> matrix = [[3,6,9],[12,15,18]]
+    >>> new_matrix = matrix_divided(matrix, 3)
+    >>> new_matrix == matrix
+    False
+
+test using one element:
+    >>> matrix_divided([[12]], 4)
+    [[3.0]]
+
+test using a negative div variable:
+    >>> matrix_divided([[5,10,15],[20,25,30]],-5)
+    [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+
+test using unequal rows:
+    >>> matrix_divided([[7,6,9,12],[15,18,21]],5)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+test using zero div variable:
+    >>> matrix_divided([[5,10,15],[20,25,30]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+test using non-number div variable:
+    >>> matrix_divided([[5,10,15],[20,25,30]], "0")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+test using non-matrix:
+    >>> matrix_divided([10,[20,25,30]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test using tuples:
+    >>> matrix_divided([(10,8,6),(20,25,30)], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test using empty matrix:
+    >>> matrix_divided([[],[]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test using float div:
+    >>> matrix_divided([[2,4,6,8],[10,12,14,16]], 2.4)
+    [[0.83, 1.67, 2.5, 3.33], [4.17, 5.0, 5.83, 6.67]]
+
+test using non-numeric div:
+    >>> matrix_divided([[2,4,6,8],[10,12,14,16]], [9])
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+test using infinity div:
+    >>> matrix_divided([[2,4,6,8],[10,12,14,16]], float('inf'))
+    [[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0]]
+
+test division by None:
+    >>> matrix_divided([[2,4,6,8],[10,12,14,16]], None)
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+

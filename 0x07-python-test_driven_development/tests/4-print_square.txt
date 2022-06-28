@@ -1,0 +1,48 @@
+Test module for print_square
+=================================================================
+
+Using `print_square`
+_________________________________________________________________
+
+first import print_square fron 4-print_square:
+    >>> print_square = __import__('4-print_square').print_square
+
+test usage using integer size.
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+test usage using non-integer size:
+    >>> print_square("u")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test usage using negative size:
+    >>> print_square(-6)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+test usage using a float:
+    >>> print_square(1.1)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test usage using negative float:
+    >>> print_square(-1.1)
+    Traceback (most recent call last):
+     ...
+    TypeError: size must be an integer
+
+test usage using zero:
+    >>> print_square(0)
+
+test usage using boolean(True):
+    >>> print_square(True)
+    #
