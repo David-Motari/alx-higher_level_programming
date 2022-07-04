@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-base_geometry
-"""
+"""base_geometry"""
 
 
-class BaseGeometry():
-    """
-    represents geometry
-    """
+class BaseGeometry:
+    """represents geometric shape"""
 
     def area(self):
         """Getter"""
-        raise Exception("Area() is not implemented")
+        raise Exception("area() is not implemented")
