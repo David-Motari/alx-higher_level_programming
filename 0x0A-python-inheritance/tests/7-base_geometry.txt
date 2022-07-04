@@ -1,3 +1,10 @@
+Test for module base_geometry
+___________________________________________________________________
+Using `base_geometry`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+first import module:
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
