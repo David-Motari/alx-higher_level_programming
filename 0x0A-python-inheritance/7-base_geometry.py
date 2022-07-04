@@ -1,20 +1,29 @@
 #!/usr/bin/python3
-"""base_geometry"""
+"""
+validator and implementation error
+"""
 
 
-class BaseGeometry:
-    """represents geometric shape"""
+class BaseGeometry():
+    """
+    goemetric class
+    """
 
     def area(self):
-        """Getter"""
-        raise Exception("area() is not implemented")
+        """
+        implementation exception
+        """
+        raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
         """
-        args: name - variable
-        value - integer assigned to name
+        Validate if value is a integer.
+        Args:
+          - name: string
+          - value: integer
         """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
+        if not isinstance(value, int):
+            raise TypeError('{:s} must be an integer'.format(name))
+
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError('{:s} must be greater than 0'.format(name))
