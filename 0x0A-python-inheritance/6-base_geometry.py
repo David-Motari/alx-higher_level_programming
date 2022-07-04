@@ -4,7 +4,7 @@ base_geometry
 """
 
 
-class BaseGeometry:
+class BaseGeometry():
     """
     represents geometry
     """
