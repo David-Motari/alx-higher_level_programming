@@ -5,4 +5,7 @@ base_geometry
 
 
 class BaseGeometry:
+    """
+    represents geometry
+    """
     pass
