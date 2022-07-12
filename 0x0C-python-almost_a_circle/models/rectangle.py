@@ -130,7 +130,7 @@ class Rectangle(Base):
             for i, j in kwargs.items():
                 if i == "id":
                     if j is None:
-                        self.__init__(self.width,self.height,self.x,self.y)
+                        self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = j
                 elif i == "width":
@@ -140,7 +140,7 @@ class Rectangle(Base):
                 elif i == "x":
                     self.x = j
                 elif i == "y":
-                    self.y= j
+                    self.y = j
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) \
