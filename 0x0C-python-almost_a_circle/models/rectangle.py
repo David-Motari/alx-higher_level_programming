@@ -143,6 +143,7 @@ class Rectangle(Base):
                     self.y = j
 
     def to_dictionary(self):
+        """dictionary rep of rectangle"""
         return {
             "id": self.id,
             "width": self.width,
