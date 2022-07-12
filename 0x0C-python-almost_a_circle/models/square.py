@@ -21,6 +21,9 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """
+        size
+        """
         return self.width
     
     @size.setter
