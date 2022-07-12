@@ -90,8 +90,12 @@ class Rectangle(Base):
         if self.__height == 0 or self.__width == 0:
             print("")
             return
+        for y in range(self.y):
+            print("")
         for i in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.x, end="")
+            print("#" * self.__width, end="")
+            print("")
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) \
