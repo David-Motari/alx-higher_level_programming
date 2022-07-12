@@ -19,44 +19,44 @@ class Rectangle(Base):
         y - y axis position of new triangle
         id - identity of triangle
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
-        @property
-        def width(self):
-            """defines width"""
-            return self.__width
+    @property
+    def width(self):
+        """defines width"""
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            self.__width = value
+    @width.setter
+    def width(self, value):
+        self.__width = value
 
-        @property
-        def height(self):
-            """defines height"""
-            return self.__height
+    @property
+    def height(self):
+        """defines height"""
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            self.__height = value
+    @height.setter
+    def height(self, value):
+        self.__height = value
 
-        @property
-        def x(self):
-            """defines x"""
-            return self.__x
+    @property
+    def x(self):
+        """defines x"""
+        return self.__x
 
-        @x.setter
-        def x(self, value):
-            self.__x = value
+    @x.setter
+    def x(self, value):
+        self.__x = value
 
-        @property
-        def y(self):
-            """defines y"""
-            return self.__y
+    @property
+    def y(self):
+        """defines y"""
+        return self.__y
 
-        @y.setter
-        def y(self, value):
-            self.__y = value
+    @y.setter
+    def y(self, value):
+        self.__y = value
