@@ -65,5 +65,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """ """
-        ...
+        """
+        args: **dictionary - can be thought of as double pointer to dictionary
+        return: an instance with all attributes already set
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            return new
