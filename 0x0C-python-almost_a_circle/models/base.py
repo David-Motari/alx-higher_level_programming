@@ -50,3 +50,20 @@ class Base:
                 for obj in list_objs:
                     dict_list.append(obj.to_dictionary())
                 My_file.write(Base.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        args: json_string - is a string representing a list of dictionaries
+        Returns: If json_string is None or empty, an empty list
+        else the list represented by json_string
+        """
+        if json_string is None:
+            return "[]"
+
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ """
+        ...
