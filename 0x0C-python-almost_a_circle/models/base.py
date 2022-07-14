@@ -47,5 +47,5 @@ class Base:
 
             else:
                 for obj in list_objs:
-                    dict_list = obj.to_dictionary()
+                    dict_list = [obj.to_dictionary()]
                     My_file.write(Base.to_json_string(dict_list))
