@@ -3,6 +3,7 @@
 base.py
 """
 import json
+import csv
 
 
 class Base:
@@ -90,5 +91,49 @@ class Base:
 
                 return [cls.create(**dict) for dict in dict_list]
 
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        args: list_objs - serialize to csv
+        returns
+        """
+        my_file = cls.__name__ + ".csv"
+        with open(my_file, "w", newline="") as c_file:
+            if list_objs == [] or list_objs is None:
+                c_file.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    field_names = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    field_names = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(c_file, fieldnames=field_names)
+                for objct in list_objs:
+                    writer.writerow(objct.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserialize from csv
+        returns: no file return empty list
+        else list of instances
+        """
+        file_n = cls.__name__ + ".csv"
+        try:
+            with open(file_n, "r", newline="") as c_file:
+                if cls.__name__ == "Rectangle":
+                    field_names = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    field_names = ["id", "size", "x", "y"]
+                dict_list = csv.DictReader(c_file, fieldnames=field_names)
+
+                dict_list = [
+                    dict([k, int(v)] for k, v in dic.items())
+                    for dic in dict_list
+                ]
+
+                return [cls.create(**dic) for dic in dict_list]
         except IOError:
             return []
