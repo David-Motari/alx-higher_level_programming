@@ -82,15 +82,13 @@ class Base:
         """
         Returns: a list of instances
         """
-        My_file = cls.__name__ + ".json"
+        my_File = str(cls.__name__) + ".json"
 
         try:
-            with open(My_file, "w") as j_file:
+            with open(my_File, "r") as j_file:
                 dict_list = Base.from_json_string(j_file.read())
 
-                for dict in dict_list:
-                    lst = [cls.create(**dict)]
-                return lst
+                return [cls.create(**dict) for dict in dict_list]
 
         except IOError:
             return []
