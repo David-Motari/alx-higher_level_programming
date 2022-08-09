@@ -12,3 +12,6 @@
 * [4-first_table.sql](./4-first_table.sql) -  script that creates a table called first_table in the current database in your MySQL server.
 ## File 5:
 * [5-full_table.sql](./5-full_table.sql) -  script that prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL server.
+
+* [6-list_values.sql](./6-list_values.sql) - script that lists all rows of the table first_table from the database hbtn_0c_0 in your MySQL server.
+
