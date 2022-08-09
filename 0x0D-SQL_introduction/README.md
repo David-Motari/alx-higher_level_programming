@@ -24,3 +24,9 @@
 
 ## FILE 9: 
 * [9-full_creation.sql](./9-full_creation.sql) - script that creates a table second_table in the database hbtn_0c_0 in your MySQL server and add multiples rows.
+
+## FILE 10: 
+* [10-top_score.sql](./10-top_score.sql) - script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
+
+## FILE 11: 
+* [11-best_score.sql](./11-best_score.sql) - script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server.
