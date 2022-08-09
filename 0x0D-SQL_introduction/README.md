@@ -30,3 +30,18 @@
 
 ## FILE 11: 
 * [11-best_score.sql](./11-best_score.sql) - script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+
+## FILE 12: 
+* [12-no_cheating.sql](./12-no_cheating.sql) - script that updates the score of Bob to 10 in the table second_table.
+
+## FILE 13: 
+* [13-change_class.sql](./13-change_class.sql) - script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+
+## FILE 14: 
+* [14-average.sql](./14-average.sql) - script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.
+
+## FILE 15: 
+* [15-groups.sql](./15-groups.sql) -  script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server.
+
+## FILE 16: 
+* [16-no_link.sql](./16-no_link.sql) - script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
