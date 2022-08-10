@@ -34,7 +34,19 @@
 * [10-genre_id_by_show.sql](./10-genre_id_by_show.sql) -  script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
 
 ## File 11:
-* [11-genre_id_all_shows.sql](11-genre_id_all_shows.sql) - script that lists all shows contained in the database hbtn_0d_tvshows.
+* [11-genre_id_all_shows.sql](./11-genre_id_all_shows.sql) - script that lists all shows contained in the database hbtn_0d_tvshows.
 
 ## File 12:
-* [12-no_genre.sql](12-no_genre.sql) - script that lists all shows contained in hbtn_0d_tvshows without a genre linked.
+* [12-no_genre.sql](./12-no_genre.sql) - script that lists all shows contained in hbtn_0d_tvshows without a genre linked.
+
+## File 13:
+* [13-count_shows_by_genre.sql](./13-count_shows_by_genre.sql) - script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
+
+## File 14:
+* [14-my_genres.sql](./14-my_genres.sql) - script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.
+
+## File 15:
+* [15-comedy_only.sql](./15-comedy_only.sqll) - script that lists all Comedy shows in the database hbtn_0d_tvshows.cript that lists all shows contained in hbtn_0d_tvshows without a genre linked.
+
+## File 16:
+* [16-shows_by_genre.sql](./16-shows_by_genre.sql) - script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
