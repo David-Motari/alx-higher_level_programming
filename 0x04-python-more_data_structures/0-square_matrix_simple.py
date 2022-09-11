@@ -14,6 +14,10 @@ def square_matrix_simple(matrix=[]):
         # create new row
         n_row = []
         for m in range(cols):
+<<<<<<< HEAD
             n_row.append((matrix[n][m]**2))
+=======
+            n_row.append((matrix[n][m] ** 2))
+>>>>>>> 2cdd53dc430a63ab3d8cfb6ff9b2a6fdf7869a64
         new_matrix.append(n_row)
     return new_matrix

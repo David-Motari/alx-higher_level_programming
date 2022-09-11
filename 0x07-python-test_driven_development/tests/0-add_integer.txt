@@ -1,0 +1,90 @@
+Test module for `0-add_integer`
+====================================
+
+Using `add_integer`
+_____________________________________
+
+first import` add_integer` from module `0-add_integer`:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test for usage using zero as first argument (default):
+    >>> add_integer(0)
+    98
+
+test for usage using one argument:
+    >>> add_integer(50)
+    148
+
+test for usage using one float argument:
+    >>> add_integer(20.5)
+    118
+
+test for usage using one negative float argument:
+    >>> add_integer(-48.9)
+    50
+
+test for usage using two arguments:
+    >>> add_integer(20, 30)
+    50
+
+test for usage using (a as float) and (b as integer):
+    >>> add_integer(50.9, 100)
+    150
+
+test for usage using (a as integer) and (b as float):
+    >>> add_integer(50, 999.9)
+    1049
+
+test for usage using (a as negative) and (b as positive):
+    >>> add_integer(-50, 100)
+    50
+
+test for usage using (a as positive) and (b as negative):
+    >>> add_integer(50, -999)
+    -949
+
+test usage using both arguments as long integers:
+    >>> add_integer(123456678910, 908765432191873)
+    908888888870783
+
+test usage using both argument as infinity:
+    >>> add_integer(float('inf'), float('-inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+test usage using float inifinity:
+    >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+test usage using `NaN`:
+    >>> add_integer(float('NaN'), 999)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+test usage using invalid fisrt arguement:
+    >>> add_integer("me", 90)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test usage using invalid second arguement:
+    >>> add_integer(90, "me")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+test usage using both invalid arguments:
+    >>> add_integer("me", {})
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test usage using string arguements:
+    >>> add_integer("me", "you")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer

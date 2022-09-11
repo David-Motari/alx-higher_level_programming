@@ -1,0 +1,48 @@
+Test module for 3-say_my_name
+=================================
+
+Using `say_my_name`
+__________________________________
+
+first import say_my_name from module 3-say_my_name:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+test usage using string first_name and second_name:
+    >>> say_my_name("David", "Motari")
+    My name is David Motari
+
+test using non-string first_name and string second_name:
+    >>> say_my_name(8, "Motari")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test using string first_name and non-second_name:
+    >>> say_my_name("David", 808)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+test using one argument:
+    >>> say_my_name("David")
+    My name is David 
+
+test using both arguments as non-string:
+    >>> say_my_name(93.6, 808)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test using first_name as blank string("")
+    >>> say_my_name("", "Motari")
+    My name is  Motari
+
+test using second_name as blank string(")
+    >>> say_my_name("David", "")
+    My name is David 
+
+test usage using more than two arguements:
+    >>> say_my_name("David", "Motari", "Obegi" )
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
