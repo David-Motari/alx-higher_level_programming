@@ -4,14 +4,13 @@ connecting to the db to make query
 """
 
 import MySQLdb
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
-    db_con = MySQLdb.connect(
-            user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    db_con = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     curs = db_con.cursor()
-    curs.excute("SELECT * FROM `states`;")
+    curs.execute("SELECT * FROM `states`;")
     states = curs.fetchall()
     for state in states:
         print(states)
