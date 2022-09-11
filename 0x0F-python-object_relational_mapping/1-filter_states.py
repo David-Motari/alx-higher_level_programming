@@ -8,11 +8,11 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    db_con = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
-    curs = db_con.cursor()
-    curs.execute("SELECT * FROM states ORDER BY id")
-    states = curs.fetchall()
+    con = MySQLdb.connect(port=3304, host='localhost',
+                          user=argv[1], passwd=argv[2], db=argv[3])
+    cur = con.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id")
+    states = cur.fetchall()
     for state in states:
-        if state[1][0] == "N":
-            print(state)
-    db_con.close()
+        print(state)
+    con.close()
