@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 
-def main():
+if __name__ == "__main__":
     """
     connecting to the db to make query
     """
@@ -19,9 +19,3 @@ def main():
         db_con.close()
     except FileNotFoundError:
         print("Can't connect to database")
-        return 0
-
-
-if __name__ == "__main__":
-
-    main()
