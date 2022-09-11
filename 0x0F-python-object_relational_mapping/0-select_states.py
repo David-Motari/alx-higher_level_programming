@@ -13,5 +13,5 @@ if __name__ == "__main__":
     curs.execute("SELECT * FROM `states`;")
     states = curs.fetchall()
     for state in states:
-        print(states)
+        print(state)
     db_con.close()
