@@ -15,6 +15,7 @@ if __name__ == "__main__":
     session = Session(bing=engine)
     new_item = State(name="Louisiana")
     session.add(new_item)
+    session.commit()
     new_state = session.query(State).filter(State.name == 'Louisiana').first()
     print("{}".format(new_state.id))
     session.close()
