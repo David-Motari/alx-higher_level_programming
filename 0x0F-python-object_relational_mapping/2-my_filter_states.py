@@ -13,7 +13,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     srch = argv[4]
     cur.execute("""SELECT * FROM states WHERE name = '{:s}'
-    ORDER BY id ASC""").format(srch)
+ORDER BY id ASC""".format(srch))
     states = cur.fetchall()
     for state in states:
         print(state)
