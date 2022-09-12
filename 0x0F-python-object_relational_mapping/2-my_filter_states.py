@@ -11,7 +11,7 @@ if __name__ == "__main__":
     curs = db_con.cursor()
     s = argv[4]
     curs.execute("""SELECT * FROM states
-            WHERE name = s ORDER BY state.id ASC;""")
+            WHERE name = {:s} ORDER BY state.id ASC;""").format(s)
     states = curs.fetchall()
     for state in states:
         print(state)
