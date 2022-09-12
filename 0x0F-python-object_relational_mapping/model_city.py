@@ -8,12 +8,12 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class State(Base):
+class City(Base):
     """
     schema for city table in db
     """
-    __tablename__ = 'states'
+    __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String, nullable=False)
-    state_id = Column(Integer, ForeignKey('States.id'),)
+    state_id = Column(Integer, ForeignKey('states.id'),)
