@@ -13,8 +13,8 @@ if __name__ == "__main__":
     cur = conn.cursor()
     srch = argv[4]
     cur.execute("""SELECT cities.id, cities.name, states.name FROM cities JOIN
-        states ON states.id = cities.state_id WHERE states.name='{:s}'
-        ORDER BY cities.id ASC""".format(srch))
+        states ON states.id = cities.state_id WHERE states.name=%s
+        ORDER BY cities.id ASC""", (srch,))
     cities = cur.fetchall()
     for city in cities:
         print(city)
