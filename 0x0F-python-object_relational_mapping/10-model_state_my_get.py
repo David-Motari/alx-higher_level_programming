@@ -18,7 +18,7 @@ if __name__ == "__main__":
     state = session.Query(State).filter(State.name == s).\
         order_by(State.id).first()
     if state:
-        print("{}".format(str(state.id))
+        print("{}".format(str(state.id)))
     else:
         print("Not found")
     session.close()
