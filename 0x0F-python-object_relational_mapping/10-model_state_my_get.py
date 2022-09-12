@@ -11,15 +11,14 @@ from sqlalchemy.orm import Session
 
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2],
-                                   sys.argv[3]), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        argv[1], argv[2], argv[3]), pool_pre_ping=True)
     session = Session(bing=engine)
     s = argv[4]
     state = session.Query(State).filter(State.name == s).\
         order_by(State.id).first()
     if state:
-        print(str(state.id))
+        print("{}".format(str(state.id))
     else:
         print("Not found")
     session.close()
