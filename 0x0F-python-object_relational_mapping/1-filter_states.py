@@ -7,17 +7,13 @@ from sys import argv
 
 if __name__ == '__main__':
 
-    import MySQLdb
-    import sys
-
-    con = MySQLdb.connect(host='localhost', port=3306,
-                          user=argv[1], passwd=argv[2], db=argv[3])
-
-    curs = db.cursor()
-    curs.execute("""SELECT * FROM states WHERE name
-LIKE 'N%' ORDER BY states.id ASC""")
-    states = curs.fetchall()
+    conn = MySQLdb.connect(host="localhost", port=3306,
+                           user=argv[1], passwd=argv[2], db=argv[3])
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    states = cur.fetchall()
     for state in states:
         if state[1][0] == 'N':
             print(state)
-    con.close()
+    cur.close()
+    conn.close()
