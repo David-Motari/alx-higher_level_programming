@@ -14,7 +14,7 @@ if __name__ == "__main__":
     srch = argv[4]
     cur.execute(
             """SELECT * FROM states
-            WHERE name = {:s} ORDER BY id ASC""").format(search)
+            WHERE name = {:s} ORDER BY id ASC""").format(srch)
     states = cur.fetchall()
     for state in states:
         print(state)
