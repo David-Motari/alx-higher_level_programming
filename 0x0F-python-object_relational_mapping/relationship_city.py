@@ -5,6 +5,7 @@ contains the class definition of a City
 from sqlalchemy import Column, Integer, String, ForeignKey
 from relationship_state import Base
 
+
 class City(Base):
     """
     schema for city table in db
