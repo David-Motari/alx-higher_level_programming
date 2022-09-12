@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-
+lists all State objects from the database hbtn_0e_6_usa
 """
 from model_state import State
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
