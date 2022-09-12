@@ -6,7 +6,7 @@ from model_state import State
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import Session
 
 
 if __name__ == "__main__":
