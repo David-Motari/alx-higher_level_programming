@@ -12,8 +12,8 @@ if __name__ == "__main__":
                            user=argv[1], passwd=argv[2], db=argv[3])
     cur = conn.cursor()
     srch = argv[4]
-    cur.execute("""SELECT * FROM states WHERE name LIKE %s
-ORDER BY id ASC""",(srch,))
+    cur.execute("""SELECT * FROM states WHERE name=%s
+ORDER BY id ASC""", (srch,))
     states = cur.fetchall()
     for state in states:
         print(state)
