@@ -7,12 +7,14 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    db_con = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
-    curs = db_con.cursor()
-    s = argv[4]
-    curs.execute("""SELECT * FROM states
-            WHERE name = {:s} ORDER BY state.id ASC;""").format(s)
-    states = curs.fetchall()
+    conn = MySQLdb.connect(host="localhost", port=3306,
+                           user=argv[1], passwd=argv[2], db=argv[3])
+    cur = conn.cursor()
+    cur.execute("""SELECT * FROM states
+            WHERE name = {:s}
+            ORDER BY id ASC""").format(argv[4])
+    states = cur.fetchall()
     for state in states:
         print(state)
-    db_con.close()
+    cur.close()
+    conn.close()
