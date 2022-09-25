@@ -19,8 +19,7 @@ def main():
     post the email to the given address
     """
     http_url = argv[1]
-    email = argv[2]
-    value = {"email": email}
+    value = {"email": argv[2]}
     respo = requests.post(http_url, data=value)
     print(respo.text)
 
